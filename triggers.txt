@@ -1,0 +1,7 @@
+Give [i] random friend(s) [j] [k]
+Give all friends [j] [k]
+Summon a [j] [k] [Pet]
+Give shop pets [j] [k] [perm]
+Give friend [z] [j] [k] [perm]
+Deal [j] damage to [i] enemies
+Gain an extra [i] gold
