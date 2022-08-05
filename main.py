@@ -1,7 +1,23 @@
 import time
+from pet import Pet
+from createPets import getPets
+from Teams import Team
 
 def main():
-    print("SUPER AUTO PETS")
+    
+    PetList = getPets()
+
+    for a in PetList:
+        if a.Tier == 1:
+            print(a)
+    
+    Team1 = Team()
+    
+    Team1.addPet(PetList[22])
+    Team1.addPet(PetList[87])
+    Team1.addPet(PetList[150])
+    print(Team1)
+
 
 
 if __name__ == '__main__':
