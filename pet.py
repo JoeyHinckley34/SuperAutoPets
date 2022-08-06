@@ -1,6 +1,3 @@
-
-
-
 class Pet():
     def __init__(self,
                 Tier = None,
@@ -62,4 +59,28 @@ class Pet():
     def __str__(self):
         return f'{self.TopString}\n{self.shape}\n{self.Name}\n{self.bottomString}\n'
   
-        
+#    def __copy__(self):
+#        return type(self)(self.Tier,
+#                          self.Health,
+#                          self.Attack,
+#                          self.Trigger_1,
+#                          self.Trigger_2,
+#                          self.Trigger_3,
+#                          self.Ability,
+#                          self.LEVEL_1,
+#                          self.LEVEL_2,
+#                          self.LEVEL_3,
+#                          self.Standard_Pack,
+#                          self.Expansion_Pack_1,
+#                          self.Expansion_Pack_2)
+  
+    def __update(self):
+        self.TopString = f'LVL:{self.level} {self.experience}/{self.level+1}'
+        self.bottomString = f'A:{self.Attack} H:{self.Health}'
+  
+    def takeDamage(self,ATK):
+        self.Health -= ATK
+        self.__update()
+    
+    
+    

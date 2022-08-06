@@ -1,4 +1,5 @@
 import time
+import copy
 import pandas as pd
 from pet import Pet
 
@@ -36,6 +37,19 @@ def getPets():
         
     return PetList
 
+
+
+def getAllShopPets(ShopLevel):
+    
+    PetList = getPets()
+    
+    AllShopPets = []
+    for a in PetList:
+        if a.Tier >= ShopLevel:
+            AllShopPets.append(copy.copy(a))
+            
+    return AllShopPets
+    
 
 def main():
     PetList = getPets()
